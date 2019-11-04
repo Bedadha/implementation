@@ -10,24 +10,24 @@ class Stack {
 	int top; 
 
 public: 
-	int a[MAX]; // Maximum size of Stack 
+	int b[MAX]; // Maximum size of Stack 
 
 	Stack() { top = -1; } 
-	bool push(int x); 
+	bool push(int y); 
 	int pop(); 
 	int peek(); 
 	bool isEmpty(); 
 }; 
 
-bool Stack::push(int x) 
+bool Stack::push(int y) 
 { 
 	if (top >= (MAX - 1)) { 
 		cout << "Stack Overflow"; 
 		return false; 
 	} 
 	else { 
-		a[++top] = x; 
-		cout << x << " pushed into stack\n"; 
+		b[++top] = y; 
+		cout << y << " pushed into stack\n"; 
 		return true; 
 	} 
 } 
@@ -39,8 +39,8 @@ int Stack::pop()
 		return 0; 
 	} 
 	else { 
-		int x = a[top--]; 
-		return x; 
+		int y= a[top--]; 
+		return y; 
 	} 
 } 
 int Stack::peek() 
@@ -50,8 +50,8 @@ int Stack::peek()
 		return 0; 
 	} 
 	else { 
-		int x = a[top]; 
-		return x; 
+		int y = b[top]; 
+		return b; 
 	} 
 } 
 
@@ -64,9 +64,9 @@ bool Stack::isEmpty()
 int main() 
 { 
 	class Stack s; 
-	s.push(10); 
-	s.push(20); 
 	s.push(30); 
+	s.push(40); 
+	s.push(50); 
 	cout << s.pop() << " Popped from stack\n"; 
 
 	return 0; 
