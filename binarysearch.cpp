@@ -110,26 +110,21 @@ struct node* deleteNode(struct node* root, int key)
 int main() 
 { 
 	/* Let us create following BST 
-			50 
+			60 
 		/	 \ 
-		30	 70 
+		40	 80 
 		/ \ / \ 
-	20 40 60 80 */
+	30 50 70 90 */
 	struct node *root = NULL; 
-	root = insert(root, 50); 
-	root = insert(root, 30); 
-	root = insert(root, 20); 
-	root = insert(root, 40); 
-	root = insert(root, 70); 
 	root = insert(root, 60); 
+	root = insert(root, 40); 
+	root = insert(root, 30); 
+	root = insert(root, 50); 
 	root = insert(root, 80); 
+	root = insert(root, 70); 
+	root = insert(root, 90); 
 
 	cout<<"Inorder traversal of the given tree \n"); 
-	inorder(root); 
-
-	cout<<"\nDelete 20\n"; 
-	root = deleteNode(root, 20); 
-	cout<<"Inorder traversal of the modified tree \n"; 
 	inorder(root); 
 
 	cout<<"\nDelete 30\n"; 
@@ -137,8 +132,13 @@ int main()
 	cout<<"Inorder traversal of the modified tree \n"; 
 	inorder(root); 
 
-	cout<<"\nDelete 50\n"; 
-	root = deleteNode(root, 50); 
+	cout<<"\nDelete 40\n"; 
+	root = deleteNode(root, 40); 
+	cout<<"Inorder traversal of the modified tree \n"; 
+	inorder(root); 
+
+	cout<<"\nDelete 60\n"; 
+	root = deleteNode(root, 60); 
 	cout<<"Inorder traversal of the modified tree \n"; 
 	inorder(root); 
 
