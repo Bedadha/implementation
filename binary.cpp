@@ -140,16 +140,16 @@ Node* deletion(Node* t,int key)
 }
 int main ()
 {
-    /*struct Node* root = newNode(10); 
-    root->left = newNode(11); 
-    root->left->left = newNode(7); 
-    root->right = newNode(9); 
-    root->right->left = newNode(15); 
-    root->right->right = newNode(8); 
+    /*struct Node* root = newNode(11); 
+    root->left = newNode(12); 
+    root->left->left = newNode(8); 
+    root->right = newNode(10); 
+    root->right->left = newNode(16); 
+    root->right->right = newNode(9); 
     cout << "Inorder traversal before insertion:"; 
     inorder(root); 
   
-    int key = 12; 
+    int key = 13; 
     insert(root, key); 
   
     cout << endl; 
@@ -158,18 +158,18 @@ int main ()
   */
 
 
-    struct Node* root = newNode(10); 
-    root->left = newNode(11); 
-    root->left->left = newNode(7); 
-    root->left->right = newNode(12); 
-    root->right = newNode(9); 
-    root->right->left = newNode(15); 
-    root->right->right = newNode(8); 
+    struct Node* root = newNode(11); 
+    root->left = newNode(12); 
+    root->left->left = newNode(8); 
+    root->left->right = newNode(13); 
+    root->right = newNode(10); 
+    root->right->left = newNode(16); 
+    root->right->right = newNode(9); 
   
     cout << "Inorder traversal before deletion : "; 
     inorder(root); 
   
-    int key = 11; 
+    int key = 12; 
     root = deletion(root, key); 
   
     cout << endl; 
